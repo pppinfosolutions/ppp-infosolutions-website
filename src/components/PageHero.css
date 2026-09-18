@@ -1,0 +1,15 @@
+.page-hero {
+  background: var(--navy-950);
+  color: var(--white);
+  padding: 96px 0 64px;
+}
+.page-hero h1 {
+  color: var(--white);
+  font-size: clamp(32px, 4.6vw, 48px);
+}
+.page-hero-sub {
+  color: var(--steel-300);
+  font-size: 17px;
+  max-width: 600px;
+  margin-top: 18px;
+}

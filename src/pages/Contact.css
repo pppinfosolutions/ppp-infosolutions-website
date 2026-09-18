@@ -1,0 +1,76 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+}
+
+.contact-info h2 { font-size: 26px; margin-bottom: 16px; }
+.contact-info p { margin-bottom: 32px; }
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(10,22,40,0.12);
+}
+.info-block:last-child { border-bottom: 1px solid rgba(10,22,40,0.12); }
+.info-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--blue-600);
+}
+.info-block a, .info-block span:not(.info-label) { font-size: 16px; color: var(--navy-900); font-weight: 500; }
+.info-block a:hover { color: var(--blue-600); }
+
+.contact-form {
+  background: var(--white);
+  border: 1px solid rgba(10,22,40,0.1);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-row { display: flex; flex-direction: column; gap: 8px; }
+.form-row-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+label { font-size: 13px; font-weight: 600; color: var(--navy-900); }
+input, textarea {
+  border: 1px solid #c9d0da;
+  border-radius: 3px;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--navy-900);
+  background: var(--paper);
+  resize: vertical;
+}
+input, textarea { transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--blue-400);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(59,143,214,0.15);
+}
+.contact-form .btn { align-self: flex-start; margin-top: 8px; border: none; }
+.contact-form .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.form-status {
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 3px;
+  animation: rise-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.form-status.success { background: rgba(46,160,90,0.12); color: #1c7a43; }
+.form-status.error { background: rgba(214,60,60,0.1); color: #b3312f; }
+.form-status.warn { background: rgba(242,148,31,0.12); color: var(--ember-dim); }
+.form-status code { font-family: var(--font-mono); font-size: 12.5px; }
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-row-split { grid-template-columns: 1fr; }
+  .contact-form { padding: 28px 22px; }
+}
