@@ -33,6 +33,14 @@ export default function Footer() {
           <span>© {year} PPP Infosolutions. All rights reserved.</span>
           <span className="footer-tag">Casting Simulation · CAE Software · CAD/CAE Services</span>
         </div>
+        <div className="container footer-credit">
+          <span>
+            © Copyrights by{' '}
+            <a href="https://a2zcloudstack.com/" target="_blank" rel="noopener noreferrer">
+              A2Z Cloud Stack
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   )
