@@ -89,14 +89,20 @@
     flex-direction: column;
     align-items: stretch;
     background: var(--navy-950);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 8px 20px 20px;
+    border-bottom: 1px solid transparent;
+    padding: 0 20px;
     gap: 2px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease;
+    visibility: hidden;
+    transition: max-height 0.25s ease, padding 0.25s ease, visibility 0.25s;
   }
-  .nav-links.is-open { max-height: 400px; }
+  .nav-links.is-open {
+    max-height: 400px;
+    padding: 8px 20px 20px;
+    border-bottom-color: rgba(255,255,255,0.08);
+    visibility: visible;
+  }
 
   .nav-link {
     padding: 15px 14px;
